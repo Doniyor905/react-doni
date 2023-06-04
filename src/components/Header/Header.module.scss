@@ -1,0 +1,133 @@
+.root {
+    .header__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 100px;
+        margin-bottom: 70px;
+
+        .content {
+            // width: 614px;
+
+            h1 {
+                font-size: 60px;
+                margin-bottom: 13px;
+            }
+
+            h2 {
+                font-size: 30px;
+                line-height: 38px;
+                margin-bottom: 15px;
+                width: 614px;
+
+                span {
+                    color: #AB751F;
+                }
+            }
+
+            .socials {
+                display: flex;
+                gap: 10px;
+
+                img {
+                    width: 35px;
+
+                }
+            }
+        }
+    }
+
+    @media(max-width:969px) {
+        .header__wrapper {
+            margin-bottom: 50px;
+            .content {
+                h1 {
+                    font-size: 45px;
+
+                    img {
+                        width: 40px;
+                    }
+                }
+
+                h2 {
+                    font-size: 22px;
+                    line-height: 30px;
+                    width: 360px
+                }
+            }
+        }
+
+    }
+
+    @media(max-width:678px) {
+        .header__img {
+            max-width: 300px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .header__wrapper {
+            flex-direction: column;
+            margin-top: 20px;
+
+            .content {
+                h1 {
+                    text-align: center;
+                }
+
+                h2 {
+                    width: 75%;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+                .socials {
+                    justify-content: center;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    @media(max-width:521px) {
+        .header__img {
+            max-width: 200px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .header__wrapper {
+            .content {
+                h1 {
+                    font-size: 35px;
+                    margin-bottom: 6px;
+                }
+
+                h2 {
+                    font-size: 18px;
+                    line-height: 25px;
+                }
+                .socials {
+                    justify-content: center;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    @media(max-width:370px) {
+        .header__wrapper {
+            .content {
+
+                h2 {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
+}

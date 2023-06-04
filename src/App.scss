@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial",sans-serif;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+footer {
+  margin-top: 100px;
+  margin-bottom: 30px;
+  .footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 700;
+  }
+}
+
+@media(max-width:530px) {
+  .footer {
+    margin-top: 30px;
+  }
+}
