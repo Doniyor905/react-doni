@@ -11,7 +11,7 @@ import img7 from "../../image/foto-7.png";
 
 const Projects = () => {
   return (
-    <div className={styles.root}>
+    <div className={styles.root} id="project">
       <h2>Последние проекты</h2>
       <div className={styles.inner}>
         <div className={styles.item}>
@@ -25,6 +25,7 @@ const Projects = () => {
             <p className={styles.skills__block}>JS</p>
             <p className={styles.skills__block}>PHP</p>
           </div>
+          <a href="https://aliprint.vercel.app/" className={styles.demo}>Демо</a>
         </div>
 
         <div className={styles.item}>
@@ -38,6 +39,7 @@ const Projects = () => {
             <p className={styles.skills__block}>JS</p>
             <p className={styles.skills__block}>PHP</p>
           </div>
+          <a href="https://surur-design.vercel.app/" className={styles.demo}>Демо</a>
         </div>
 
         <div className={styles.item}>
@@ -50,6 +52,7 @@ const Projects = () => {
             <p className={styles.skills__block}>CSS</p>
             <p className={styles.skills__block}>JS</p>
           </div>
+          <a href="https://sneakers-beta.vercel.app/" className={styles.demo}>Демо</a>
         </div>
 
         <div className={styles.item}>
@@ -63,6 +66,7 @@ const Projects = () => {
             <p className={styles.skills__block}>JS</p>
             <p className={styles.skills__block}>PHP</p>
           </div>
+          <a href="https://bfts.uz/" className={styles.demo}>Демо</a>
         </div>
 
         <div className={styles.item}>
@@ -78,6 +82,7 @@ const Projects = () => {
             <p className={styles.skills__block}>TypeScript</p>
             <p className={styles.skills__block}>Axios</p>
           </div>
+          <a href="#!" className={styles.demo}>Демо</a>
         </div>
 
         <div className={styles.item}>
@@ -91,6 +96,7 @@ const Projects = () => {
             <p className={styles.skills__block}>React js</p>
             <p className={styles.skills__block}>Redux</p>
           </div>
+          <a href="#!" className={styles.demo}>Демо</a>
         </div>
 
         <div className={styles.item}>
@@ -103,6 +109,7 @@ const Projects = () => {
             <p className={styles.skills__block}>CSS</p>
             <p className={styles.skills__block}>JS</p>
           </div>
+          <a href="https://pet-shop-sigma.vercel.app/" className={styles.demo}>Демо</a>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ import github from "../../image/github.svg";
 
 const Header = () => {
   return (
-    <div className={styles.root}>
+    <div className={styles.root} id="home">
       <div className={styles.header__wrapper}>
         <div className={styles.header__img}>
           <img src={stickerLogo} alt="" />
@@ -25,16 +25,16 @@ const Header = () => {
             Дониер и я делаю сайты для людей и компаний
           </h2>
           <div className={styles.socials}>
-            <a href="#!">
+            <a href="https://www.instagram.com/doniyor_web/">
               <img src={instagram} alt="" />
             </a>
-            <a href="#!">
+            <a href="https://t.me/doniyor_web">
               <img src={telegram} alt="" />
             </a>
-            <a href="#!">
+            <a href="https://github.com/Doniyor905">
               <img src={github} alt="" />
             </a>
-            <a href="#!">
+            <a href="https://www.tiktok.com/@doniyor_web?is_from_webapp=1&sender_device=pc">
               <img src={tiktokImg} alt="" />
             </a>
           </div>

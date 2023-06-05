@@ -9,20 +9,22 @@ import logoIcon from "./image/logoIcon.svg";
 
 function App() {
   return (
-    <div className="App container">
+    <>
       <Nav />
-       <Header />
-      <Projects />
-      <About />
+      <div className="App container">
+        <Header />
+        <Projects />
+        <About />
 
-      <footer className="footer">
-        <div className="footer__inner">
-          <p>YUSUPOV</p>
-          <img src={logoIcon} alt="" />
-          <p>DONIYOR</p>
-        </div>
-      </footer>
-    </div>
+        <footer className="footer">
+          <div className="footer__inner">
+            <p>YUSUPOV</p>
+            <img src={logoIcon} alt="" />
+            <p>DONIYOR</p>
+          </div>
+        </footer>
+      </div>
+    </>
   );
 }
 
