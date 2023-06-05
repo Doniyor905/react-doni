@@ -25,7 +25,7 @@ const Projects = () => {
             <p className={styles.skills__block}>JS</p>
             <p className={styles.skills__block}>PHP</p>
           </div>
-          <a href="https://aliprint.vercel.app/" className={styles.demo}>Демо</a>
+          <a href="https://aliprint.vercel.app/" className={styles.demo}>Смотреть</a>
         </div>
 
         <div className={styles.item}>
@@ -39,7 +39,7 @@ const Projects = () => {
             <p className={styles.skills__block}>JS</p>
             <p className={styles.skills__block}>PHP</p>
           </div>
-          <a href="https://surur-design.vercel.app/" className={styles.demo}>Демо</a>
+          <a href="https://surur-design.vercel.app/" className={styles.demo}>Смотреть</a>
         </div>
 
         <div className={styles.item}>
@@ -52,7 +52,7 @@ const Projects = () => {
             <p className={styles.skills__block}>CSS</p>
             <p className={styles.skills__block}>JS</p>
           </div>
-          <a href="https://sneakers-beta.vercel.app/" className={styles.demo}>Демо</a>
+          <a href="https://sneakers-beta.vercel.app/" className={styles.demo}>Смотреть</a>
         </div>
 
         <div className={styles.item}>
@@ -66,7 +66,7 @@ const Projects = () => {
             <p className={styles.skills__block}>JS</p>
             <p className={styles.skills__block}>PHP</p>
           </div>
-          <a href="https://bfts.uz/" className={styles.demo}>Демо</a>
+          <a href="https://bfts.uz/" className={styles.demo}>Смотреть</a>
         </div>
 
         <div className={styles.item}>
@@ -82,7 +82,7 @@ const Projects = () => {
             <p className={styles.skills__block}>TypeScript</p>
             <p className={styles.skills__block}>Axios</p>
           </div>
-          <a href="#!" className={styles.demo}>Демо</a>
+          <a href="#!" className={styles.demo}>Смотреть</a>
         </div>
 
         <div className={styles.item}>
@@ -96,7 +96,7 @@ const Projects = () => {
             <p className={styles.skills__block}>React js</p>
             <p className={styles.skills__block}>Redux</p>
           </div>
-          <a href="#!" className={styles.demo}>Демо</a>
+          <a href="#!" className={styles.demo}>Смотреть</a>
         </div>
 
         <div className={styles.item}>
@@ -109,7 +109,7 @@ const Projects = () => {
             <p className={styles.skills__block}>CSS</p>
             <p className={styles.skills__block}>JS</p>
           </div>
-          <a href="https://pet-shop-sigma.vercel.app/" className={styles.demo}>Демо</a>
+          <a href="https://pet-shop-sigma.vercel.app/" className={styles.demo}>Смотреть</a>
         </div>
       </div>
     </div>
