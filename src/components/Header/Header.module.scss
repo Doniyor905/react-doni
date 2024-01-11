@@ -3,11 +3,10 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        margin-top: 130px;
+        margin-top: 50px;
         margin-bottom: 70px;
 
         .content {
-            // width: 614px;
 
             h1 {
                 font-size: 60px;
@@ -40,6 +39,7 @@
     @media(max-width:969px) {
         .header__wrapper {
             margin-bottom: 50px;
+
             .content {
                 h1 {
                     font-size: 45px;
@@ -82,6 +82,7 @@
                     text-align: center;
                     margin: 0 auto;
                 }
+
                 .socials {
                     justify-content: center;
                     margin-top: 20px;
@@ -110,6 +111,7 @@
                     font-size: 18px;
                     line-height: 25px;
                 }
+
                 .socials {
                     justify-content: center;
                     margin-top: 20px;

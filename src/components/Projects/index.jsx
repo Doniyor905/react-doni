@@ -1,119 +1,115 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./Projects.module.scss";
-import img from "../../image/foto-1.png";
-import img2 from "../../image/foto-2.png";
-import img3 from "../../image/foto-3.png";
-import img4 from "../../image/foto-4.png";
-import img5 from "../../image/foto-5.png";
-import img6 from "../../image/foto-6.png";
-import img7 from "../../image/foto-7.png";
+import styles from './Projects.module.scss';
+import img from '../../image/pizza.jpg';
+import img2 from '../../image/floristman.png';
+import img3 from '../../image/Moliya.png';
+import img4 from '../../image/logistic.png';
+import img5 from '../../image/foto-1.png';
+import img6 from '../../image/foto-2.png';
+import img7 from '../../image/foto-3.png';
+import img8 from '../../image/foto-4.png';
+import img9 from '../../image/work-3.png';
+import img10 from '../../image/foto-6.png';
+import img11 from '../../image/foto-7.png';
+import { withNamespaces } from 'react-i18next';
 
-const Projects = () => {
+const Projects = ({ t }) => {
+  const data = [
+    {
+      imgUrl: img,
+      title: t('Online store'),
+      skills: ['css', 'JavaScript', 'React js', 'Redux', 'TypeScript', 'Axios', 'CSS-modules'],
+      link: 'https://pizza-doniyor905.vercel.app',
+    },
+    {
+      imgUrl: img2,
+      title: t('Online store'),
+      skills: ['css', 'JavaScript', 'React js', 'Redux', 'Axios', 'CSS-modules'],
+      link: 'https://floristman-two.vercel.app',
+    },
+    {
+      imgUrl: img3,
+      title: t('Website for the company'),
+      skills: ['css', 'JavaScript', 'React js', 'Axios', 'CSS-modules'],
+      link: 'https://moliya-web.vercel.app',
+    },
+    {
+      imgUrl: img4,
+      title: t('Logistics website'),
+      skills: ['css', 'JavaScript', 'React js', 'Axios', 'CSS-modules'],
+      link: 'https://trilliant-logistics.vercel.app',
+    },
+    {
+      imgUrl: img10,
+      title: t('Online store'),
+      skills: ['css', 'JavaScript', 'React js', 'Redux', 'Axios', 'CSS-modules'],
+      link: '/',
+    },
+    {
+      imgUrl: img9,
+      title: t('Website for the Monster company'),
+      skills: ['css', 'JavaScript', 'Vue js'],
+      link: 'https://monster-mu.vercel.app/',
+    },
+    {
+      imgUrl: img5,
+      title: t('Website for printing'),
+      skills: ['html', 'css', 'JavaScript', 'php'],
+      link: 'https://aliprint.vercel.app/',
+    },
+
+    {
+      imgUrl: img6,
+      title: t('Website for Design studio'),
+      skills: ['html', 'css', 'JavaScript', 'php'],
+      link: 'https://surur-design.vercel.app/',
+    },
+    {
+      imgUrl: img7,
+      title: t('Catalog website'),
+      skills: ['html', 'css', 'JavaScript'],
+      link: 'https://sneakers-beta.vercel.app',
+    },
+    {
+      imgUrl: img8,
+      title: t('Logistics website'),
+      skills: ['html', 'css', 'JavaScript', 'php'],
+      link: '/',
+    },
+
+    {
+      imgUrl: img11,
+      title: t('Landing page'),
+      skills: ['html', 'css', 'JavaScript'],
+      link: 'https://pet-shop-sigma.vercel.app/',
+    },
+  ];
   return (
     <div className={styles.root} id="project">
-      <h2>Последние проекты</h2>
+      <h2>{t('Lates Project Text')}</h2>
       <div className={styles.inner}>
-        <div className={styles.item}>
-          <div className={styles.img}>
-            <img src={img} alt="" />
+        {data.map((items) => (
+          <div key={items.imgUrl} className={styles.item}>
+            <div className={styles.img}>
+              <img src={items.imgUrl} alt="" />
+            </div>
+            <h3 className={styles.subtitle}>{items.title}</h3>
+            <div className={styles.skills}>
+              {items.skills.map((skill, i) => (
+                <p key={i} className={styles.skills__block}>
+                  {skill}
+                </p>
+              ))}
+            </div>
+            <a target="_blank" href={items.link} className={styles.demo}>
+              {t('View Web site')}
+            </a>
           </div>
-          <h3 className={styles.subtitle}>Корпоративный сайт</h3>
-          <div className={styles.skills}>
-            <p className={styles.skills__block}>HTML</p>
-            <p className={styles.skills__block}>CSS</p>
-            <p className={styles.skills__block}>JS</p>
-            <p className={styles.skills__block}>PHP</p>
-          </div>
-          <a href="https://aliprint.vercel.app/" className={styles.demo}>Смотреть</a>
-        </div>
-
-        <div className={styles.item}>
-          <div className={styles.img}>
-            <img src={img2} alt="" />
-          </div>
-          <h3 className={styles.subtitle}>Корпоративный сайт</h3>
-          <div className={styles.skills}>
-            <p className={styles.skills__block}>HTML</p>
-            <p className={styles.skills__block}>CSS</p>
-            <p className={styles.skills__block}>JS</p>
-            <p className={styles.skills__block}>PHP</p>
-          </div>
-          <a href="https://surur-design.vercel.app/" className={styles.demo}>Смотреть</a>
-        </div>
-
-        <div className={styles.item}>
-          <div className={styles.img}>
-            <img src={img3} alt="" />
-          </div>
-          <h3 className={styles.subtitle}>Корпоративный сайт</h3>
-          <div className={styles.skills}>
-            <p className={styles.skills__block}>HTML</p>
-            <p className={styles.skills__block}>CSS</p>
-            <p className={styles.skills__block}>JS</p>
-          </div>
-          <a href="https://sneakers-beta.vercel.app/" className={styles.demo}>Смотреть</a>
-        </div>
-
-        <div className={styles.item}>
-          <div className={styles.img}>
-            <img src={img4} alt="" />
-          </div>
-          <h3 className={styles.subtitle}>Корпоративный сайт</h3>
-          <div className={styles.skills}>
-            <p className={styles.skills__block}>HTML</p>
-            <p className={styles.skills__block}>CSS</p>
-            <p className={styles.skills__block}>JS</p>
-            <p className={styles.skills__block}>PHP</p>
-          </div>
-          <a href="https://bfts.uz/" className={styles.demo}>Смотреть</a>
-        </div>
-
-        <div className={styles.item}>
-          <div className={styles.img}>
-            <img src={img5} alt="" />
-          </div>
-          <h3 className={styles.subtitle}>Интернет магазин</h3>
-          <div className={styles.skills}>
-            <p className={styles.skills__block}>HTML</p>
-            <p className={styles.skills__block}>CSS</p>
-            <p className={styles.skills__block}>React js</p>
-            <p className={styles.skills__block}>Redux</p>
-            <p className={styles.skills__block}>TypeScript</p>
-            <p className={styles.skills__block}>Axios</p>
-          </div>
-          <a href="#!" className={styles.demo}>Смотреть</a>
-        </div>
-
-        <div className={styles.item}>
-          <div className={styles.img}>
-            <img src={img6} alt="" />
-          </div>
-          <h3 className={styles.subtitle}>Интернет магазин</h3>
-          <div className={styles.skills}>
-            <p className={styles.skills__block}>HTML</p>
-            <p className={styles.skills__block}>CSS</p>
-            <p className={styles.skills__block}>React js</p>
-            <p className={styles.skills__block}>Redux</p>
-          </div>
-          <a href="#!" className={styles.demo}>Смотреть</a>
-        </div>
-
-        <div className={styles.item}>
-          <div className={styles.img}>
-            <img src={img7} alt="" />
-          </div>
-          <h3 className={styles.subtitle}>Интернет магазин</h3>
-          <div className={styles.skills}>
-            <p className={styles.skills__block}>HTML</p>
-            <p className={styles.skills__block}>CSS</p>
-            <p className={styles.skills__block}>JS</p>
-          </div>
-          <a href="https://pet-shop-sigma.vercel.app/" className={styles.demo}>Смотреть</a>
-        </div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default Projects;
+export default withNamespaces()(Projects);
