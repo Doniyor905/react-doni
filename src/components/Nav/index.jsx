@@ -10,6 +10,7 @@ import { withNamespaces } from 'react-i18next';
 const Nav = ({ t }) => {
   const [languagePopup, setLanguagePopup] = React.useState(false);
   const [selected, setSelected] = React.useState(0);
+  const [menuOpen, setMenuOpen] = React.useState(false);
 
   const language = ['eng', 'rus', 'turk'];
 
@@ -20,61 +21,64 @@ const Nav = ({ t }) => {
   };
 
   return (
-    <div className={styles.root}>
-      <div className={styles.nav__wrapper}>
-        <div className={styles.nav__inner}>
-          <a href="#!" className={styles.nav__logo}>
-            <img src={logoSvg} alt="" />
-          </a>
-          <div className={styles.nav__block}>
-            <nav className={styles.nav}>
-              <ul className={styles.nav__list}>
-                <li>
-                  <a href="#home">{t('Nav Text Home')}</a>
+    <div className={styles.nav__inner}>
+      <a href="#!" className={styles.nav__logo}>
+        <img src={logoSvg} alt="" />
+      </a>
+      <div className={styles.nav__block}>
+        <nav className={styles.nav}>
+          <ul
+            className={
+              menuOpen ? classNames(styles['nav__list'], styles['active']) : styles['nav__list']
+            }>
+            <FontAwesomeIcon
+              onClick={() => setMenuOpen(false)}
+              size="xl"
+              icon={faXmark}
+              className={styles['burger__close']}
+            />
+            <li onClick={() => setMenuOpen(false)}>
+              <a href="#home">{t('Nav Text Home')}</a>
+            </li>
+            <li onClick={() => setMenuOpen(false)}>
+              <a href="#project">{t('Nav Text Projects')}</a>
+            </li>
+            <li onClick={() => setMenuOpen(false)}>
+              <a href="#about">{t('Nav Text About')}</a>
+            </li>
+          </ul>
+          <FontAwesomeIcon
+            onClick={() => setMenuOpen(true)}
+            size="xl"
+            icon={faBars}
+            className={styles['burger__bars']}
+          />
+        </nav>
+        <div className={styles.language}>
+          <div onClick={() => setLanguagePopup(!languagePopup)} className={styles.language__title}>
+            {language[selected]}
+            <FontAwesomeIcon icon={faCaretDown} className={styles['language__arrow']} />
+          </div>
+          <div
+            className={
+              languagePopup
+                ? classNames(styles['language__dropdown'], styles['active'])
+                : styles['language__dropdown']
+            }>
+            <ul>
+              {language.map((lang, i) => (
+                <li
+                  className={
+                    selected === i
+                      ? classNames(styles['lang__li'], styles['active'])
+                      : styles['lang__li']
+                  }
+                  key={i}
+                  onClick={() => changeLanguage(lang, i)}>
+                  {lang}
                 </li>
-                <li>
-                  <a href="#project">{t('Nav Text Projects')}</a>
-                </li>
-                <li>
-                  <a href="#about">{t('Nav Text About')}</a>
-                </li>
-              </ul>
-              <div className={styles.burger__menu}>
-                {/* <div className={styles.burger__span}></div> */}
-
-                {/* <FontAwesomeIcon size="xl" icon={faXmark} className={styles['burger__close']} /> */}
-                <FontAwesomeIcon size="xl" icon={faBars} className={styles['burger__bars']} />
-              </div>
-            </nav>
-            <div className={styles.language}>
-              <div
-                onClick={() => setLanguagePopup(!languagePopup)}
-                className={styles.language__title}>
-                {language[selected]}
-                <FontAwesomeIcon icon={faCaretDown} className={styles['language__arrow']} />
-              </div>
-              <div
-                className={
-                  languagePopup
-                    ? classNames(styles['language__dropdown'], styles['active'])
-                    : styles['language__dropdown']
-                }>
-                <ul>
-                  {language.map((lang, i) => (
-                    <li
-                      className={
-                        selected === i
-                          ? classNames(styles['lang__li'], styles['active'])
-                          : styles['lang__li']
-                      }
-                      key={i}
-                      onClick={() => changeLanguage(lang, i)}>
-                      {lang}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

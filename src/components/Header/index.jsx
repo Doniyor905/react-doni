@@ -7,6 +7,8 @@ import tiktokImg from '../../image/tiktok.svg';
 import instagram from '../../image/instagram.svg';
 import telegram from '../../image/telegram.svg';
 import github from '../../image/github.svg';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Header = ({ t }) => {
   return (
@@ -32,8 +34,8 @@ const Header = ({ t }) => {
             <a href="https://github.com/Doniyor905">
               <img src={github} alt="" />
             </a>
-            <a href="https://www.tiktok.com/@doniyor_web?is_from_webapp=1&sender_device=pc">
-              <img src={tiktokImg} alt="" />
+            <a alt="usupovd276@gmail.com" href="mailto:usupovd276@gmail.com">
+              <FontAwesomeIcon className={styles.envelope} icon={faEnvelope} />
             </a>
           </div>
         </div>

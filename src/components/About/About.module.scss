@@ -63,7 +63,6 @@
                 flex-wrap: wrap;
                 gap: 10px;
                 margin-top: 20px;
-                width: 700px;
 
                 p {
                     padding: 5px 10px;
@@ -77,6 +76,11 @@
     }
 
     @media(max-width:892px) {
+
+        .skill__box {
+            flex-wrap: wrap;
+        }
+
         .item {
             .img {
                 max-width: 392px;
