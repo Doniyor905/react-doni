@@ -55,8 +55,8 @@ const Projects = ({ t }) => {
     {
       imgUrl: img5,
       title: t('Website for printing'),
-      skills: ['html', 'css', 'JavaScript', 'php'],
-      link: 'https://aliprint-react.vercel.app/',
+      skills: ['html', 'css', 'JavaScript', 'React js'],
+      link: 'https://ali-print.uz',
     },
 
     {
